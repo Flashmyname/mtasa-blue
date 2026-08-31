@@ -259,7 +259,7 @@ void CModelCacheManagerImpl::DoPulse()
     //  128MB streaming = 8+8 MB for peds & vehicles        36 peds + 56 veh
     //  256MB streaming = 16+8 MB for peds & vehicles       72 peds + 56 veh
     //
-    const auto iStreamingMemoryAvailableKB = *(int*)0x08A5A80;
+    const auto iStreamingMemoryAvailableKB = *(int*)0x08A5A80 / 1024;
     if (!m_IsUsingCustomPedCacheLimit)
     {
         SSamplePoint<float> pedPoints[] = {{65536, 9}, {98304, 18}, {131072, 36}, {262144, 72}};

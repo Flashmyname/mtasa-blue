@@ -212,7 +212,7 @@ public:
     ///////////////////////////////////////
     void UpdateCacheSize()
     {
-        int iStreamingMemoryAvailableKB = *(int*)0x08A5A80;
+        int iStreamingMemoryAvailableKB = *(int*)0x08A5A80 / 1024;
 
         SSamplePoint<float> cloPoints[] = {{65536, 4}, {98304, 8}, {131072, 16}, {262144, 32}};
 
